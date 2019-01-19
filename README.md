@@ -1,4 +1,4 @@
 # microcredit
-# Proect elaborat in procesul de instruire
+# Proiect elaborat in procesul de instruire
 Intrerindeir de microcreditare
 
