@@ -1,6 +1,6 @@
 # microcredit
 # Proiect elaborat in procesul de instruire
-Intrerinderi de microcreditare
+Intreprinderi de microcreditare
 
 
 
