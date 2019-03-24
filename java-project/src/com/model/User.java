@@ -71,7 +71,6 @@ public class User {
 
 	@ManyToOne
 	@JoinColumn(name="role_id", referencedColumnName="id", insertable=false, updatable=false, foreignKey=@ForeignKey(name="FK_users_roles"))
-
 	public Role getRole() {
 		return role;
 	}
@@ -82,8 +81,9 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "Users [id=" + id + ", name=" + name + ", adress=" + adress + ", birthDate=" + birthDate + ", roleId="
-				+ roleId + "]";
+		return "User [id=" + id + ", name=" + name + ", adress=" + adress + ", birthDate=" + birthDate + ", roleId="
+				+ roleId + ", role=" + role + "]";
 	}
 
+	
 }
