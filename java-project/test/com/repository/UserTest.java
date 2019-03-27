@@ -63,7 +63,8 @@ public class UserTest {
 	public void testFindUserByLocation3() {
 		EntityManager entityManager = PersistenceManager.createPersistenceManager();
 		Query query = entityManager.createQuery("SELECT user  "
-				+ "FROM User user JOIN FETCH user.role "
+				+ "FROM User user "
+				+ "JOIN FETCH user.role "
 				+ "WHERE adress = 'Romania'");
 		@SuppressWarnings("unchecked")
 		List<User> users = query.getResultList();
