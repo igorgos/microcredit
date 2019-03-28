@@ -5,9 +5,14 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
+import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.model.Country;
 
 public class CountryRepository {
+	private static final Logger logger = LoggerFactory.getLogger(CountryRepository.class);
 	private EntityManager entityManager = PersistenceManager.createPersistenceManager();
 
 	public List<Country> getAllCountries() {
@@ -15,6 +20,7 @@ public class CountryRepository {
 				+ "FROM Country country");
 		@SuppressWarnings("unchecked")
 		List<Country> countries = query.getResultList();
+		logger.info("Contries: {}", countries);
 		return countries;
 	}
 
@@ -24,6 +30,8 @@ public class CountryRepository {
 		query.setParameter("name", "%"+name+"%");
 		@SuppressWarnings("unchecked")
 		List<Country> countries = query.getResultList();
+		logger.info("Contries: {}", countries);
 		return countries;
 	}
+
 }
