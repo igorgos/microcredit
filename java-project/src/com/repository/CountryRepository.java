@@ -33,4 +33,14 @@ public class CountryRepository {
 		return countries;
 	}
 
+	public List<Country> getCountriesByNameCaseInsensitive(String name) {
+		Query query = entityManager.createQuery("SELECT country "
+				+ "FROM Country country WHERE LOWER(country.name) LIKE LOWER(:name)");
+		query.setParameter("name", "%"+name+"%");
+		@SuppressWarnings("unchecked")
+		List<Country> countries = query.getResultList();
+		logger.info("Contries: {}", countries);
+		return countries;
+	}
+
 }

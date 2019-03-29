@@ -44,4 +44,13 @@ public class CountryRepositoryTest {
 		logger.info("Countries: {}", countries);
 		assertTrue(countries.size() == 0);
 	}
+
+	@Test
+	public void testGetAllCountrysCaseInsensitive() {
+		String name = "MO";
+		List<Country> countries = countryRepository.getCountriesByNameCaseInsensitive(name);
+		assertNotNull(countries);
+		logger.info("Countries: {}", countries);
+		assertTrue(countries.size() > 0);
+	}
 }
