@@ -1,6 +1,7 @@
 package com.repository;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
@@ -32,5 +33,15 @@ public class CountryRepositoryTest {
 		List<Country> countries = countryRepository.getCountriesByName(name);
 		assertNotNull(countries);
 		logger.info("Countries: {}", countries);
+		assertTrue(countries.size() > 0);
+	}
+
+	@Test
+	public void testGetAllCountrysLowerCase() {
+		String name = "mo";
+		List<Country> countries = countryRepository.getCountriesByName(name);
+		assertNotNull(countries);
+		logger.info("Countries: {}", countries);
+		assertTrue(countries.size() == 0);
 	}
 }
