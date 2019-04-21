@@ -20,7 +20,7 @@ public class User {
 	private String adress;
 	private Date birthDate;
 	private Integer roleId;
-	private Integer hobby_id;
+	private Integer hobbyId;
 	private Role role;
 	private Hobby hobby;
 	
@@ -71,12 +71,12 @@ public class User {
 		this.roleId = roleId;
 	}
 	
-	public Integer getHobby_id() {
-		return hobby_id;
+	public Integer getHobbyId() {
+		return hobbyId;
 	}
 
-	public void setHobby_id(Integer hobby_id) {
-		this.hobby_id = hobby_id;
+	public void setHobbyId(Integer hobbyId) {
+		this.hobbyId = hobbyId;
 	}
 
 	@ManyToOne
@@ -104,6 +104,6 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", adress=" + adress + ", birthDate=" + birthDate + ", roleId="
-				+ roleId + ", hobby_id=" + hobby_id + ", role=" + role + ", hobby=" + hobby + "]";
+				+ roleId + ", hobby_id=" + hobbyId + ", role=" + role + ", hobby=" + hobby + "]";
 	}
 }
