@@ -26,4 +26,14 @@ public class LocationTest {
 		assertTrue(locations.size() > 0);
 	}
 
+	@Test
+	public void testSimpleAllLocations() {
+		EntityManager entityManager = PersistenceManager.createPersistenceManager();
+		Query query = entityManager.createQuery("SELECT location "
+				+ "FROM Location location");
+		@SuppressWarnings("unchecked")
+		List<Location> locations = query.getResultList();
+		assertNotNull(locations);
+		assertTrue(locations.size() > 0);
+	}
 }
