@@ -9,7 +9,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import org.junit.Test;
-
 import com.model.Role;
 
 public class RoleTest {
@@ -76,5 +75,23 @@ public class RoleTest {
 		assertNotNull(role);
 	    assertNotNull(role.getUsers());
 	    System.out.println("role = " + role.getUsers());
+	}
+	
+	@Test
+	public void testAllRolesFetchUsers() {
+		EntityManager entityManager = PersistenceManager.createPersistenceManager();
+		Query query = entityManager.createQuery("SELECT DISTINCT role  "
+				+ "FROM Role role "
+				+ "JOIN FETCH role.users");
+		@SuppressWarnings("unchecked")
+		List<Role> roles = query.getResultList();
+		System.out.println("roles = " + roles);
+		assertNotNull(roles);
+		assertTrue(roles.size() > 0);
+		for (Role b : roles) {
+			System.out.println("b = " + b);
+			assertNotNull(b.getUsers());
+			assertTrue(b.getUsers().size() > 0);
+		}
 	}
 }

@@ -21,11 +21,12 @@ public class LocationTest {
 				+ "FROM Location location "
 				+ "JOIN FETCH location.country");
 		@SuppressWarnings("unchecked")
-		List<Location> locations = query.getResultList();
-		assertNotNull(locations);
-		assertTrue(locations.size() > 0);
-		for (Location location : locations) {
-			assertNotNull(location.getCountry());
+		List<Location> a = query.getResultList();
+		assertNotNull(a);
+		assertTrue(a.size() > 0);
+		for (Location b : a) {
+			System.out.println("b = " + b);
+			assertNotNull(b.getCountry());
 		}
 	}
 

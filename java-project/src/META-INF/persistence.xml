@@ -7,6 +7,7 @@
 		<class>com.model.Country</class>
 		<class>com.model.User</class>
 		<class>com.model.Role</class>
+		<class>com.model.Hobby</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/microcredit" />
