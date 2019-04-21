@@ -24,6 +24,9 @@ public class LocationTest {
 		List<Location> locations = query.getResultList();
 		assertNotNull(locations);
 		assertTrue(locations.size() > 0);
+		for (Location location : locations) {
+			assertNotNull(location.getCountry());
+		}
 	}
 
 	@Test
