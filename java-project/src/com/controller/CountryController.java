@@ -6,7 +6,7 @@ import java.util.List;
 import com.model.Country;
 import com.repository.CountryRepository;
 
-public class ContryController {
+public class CountryController {
 	private CountryRepository countryRepository = new CountryRepository();
 	List<Country> countries;
 
