@@ -20,7 +20,9 @@ public class User {
 	private String adress;
 	private Date birthDate;
 	private Integer roleId;
+	private Integer hobby_id;
 	private Role role;
+	private Hobby hobby;
 	
 	@Id
 	@Column(name="id")
@@ -68,22 +70,40 @@ public class User {
 	public void setRoleId(Integer roleId) {
 		this.roleId = roleId;
 	}
+	
+	public Integer getHobby_id() {
+		return hobby_id;
+	}
+
+	public void setHobby_id(Integer hobby_id) {
+		this.hobby_id = hobby_id;
+	}
 
 	@ManyToOne
 	@JoinColumn(name="role_id", referencedColumnName="id", insertable=false, updatable=false, foreignKey=@ForeignKey(name="FK_users_roles"))
-	public Role getRole() {
+	
+    public Role getRole() {
 		return role;
 	}
 
 	public void setRole(Role role) {
 		this.role = role;
 	}
+	
+	@ManyToOne
+	@JoinColumn(name="hobby_id", referencedColumnName="id", insertable=false, updatable=false, foreignKey=@ForeignKey(name="FK_users_hobbies"))
+	
+	public Hobby getHobby() {
+		return hobby;
+	}
 
+	public void setHobby(Hobby hobby) {
+		this.hobby = hobby;
+	}
+	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", adress=" + adress + ", birthDate=" + birthDate + ", roleId="
-				+ roleId + ", role=" + role + "]";
+				+ roleId + ", hobby_id=" + hobby_id + ", role=" + role + ", hobby=" + hobby + "]";
 	}
-
-	
 }

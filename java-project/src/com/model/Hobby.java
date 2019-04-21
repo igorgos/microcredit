@@ -39,7 +39,7 @@ public class Hobby {
 		this.name = name;
 	}
 
-	@OneToMany(mappedBy = "role", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "hobby", fetch = FetchType.EAGER)
 	public List<User> getUsers() {
 		return users;
 	}
@@ -47,8 +47,4 @@ public class Hobby {
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
-
-
-	
-
 }
