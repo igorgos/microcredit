@@ -3,6 +3,7 @@ package com.controller;
 import com.repository.RoleRepository;
 
 import java.util.List;
+
 import com.model.Role;
 
 public class RoleController {
@@ -15,6 +16,9 @@ public class RoleController {
 		}
 		return roles;
 	}
-
+	
+	public Role save(Role role) {
+		return roleRepository.save(role);
+	}
 }
 

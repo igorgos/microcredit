@@ -9,17 +9,28 @@
 <title>Hobbies</title>
 </head>
 <body>
+
+<a href="add_hobby.jsp">Add hobby</a><br/><br/>
+<form action="deleted_hobby.jsp" method="post">
 <table border="1"> 
 	<tr>
 		<td>Id hobby</td>
-		<td>Denumirea</td>
+		<td>Denumire</td>
+		<td>Persoane</td>
 	</tr>
 	<c:forEach var="hobby" items="${hobbyController.hobbies}"> 
 		<tr>
 			<td><c:out value="${hobby.id}"/></td>
 			<td><c:out value="${hobby.name}"/></td>
+			<td>
+			<c:forEach var="user" items="${hobby.users}">
+				<c:out value="${user.name}"/>
+			</c:forEach>
+			</td>
+			<td>&nbsp;<input name="hobby_id${hobby.id}" type="submit" value="Delete"/>&nbsp;</td>
 		</tr>
 	</c:forEach>  
 </table>  
+</form>
 </body>
 </html>

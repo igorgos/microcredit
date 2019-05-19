@@ -9,6 +9,9 @@
 <title>Roles</title>
 </head>
 <body>
+
+<a href="add_role.jsp">Add role</a><br/><br/>
+<form action="deleted_role.jsp" method="post">
 <table border="1"> 
 	<tr>
 		<td>Id role</td>
@@ -18,8 +21,10 @@
 		<tr>
 			<td><c:out value="${role.id}"/></td>
 			<td><c:out value="${role.name}"/></td>
+			<td>&nbsp;<input name="role_id${role.id}" type="submit" value="Delete"/>&nbsp;</td>
 		</tr>
 	</c:forEach>  
 </table>  
+</form>
 </body>
 </html>

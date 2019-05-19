@@ -53,4 +53,12 @@ public class CountryRepositoryTest {
 		logger.info("Countries: {}", countries);
 		assertTrue(countries.size() > 0);
 	}
+	
+//	@Test
+//	public void testSave() {
+//		Country country = new Country();
+//	    country.setName("Bulgaria");
+//	    Country savedCountry = countryRepository.save(country);
+//	    assertNotNull(savedCountry.getId());
+//	}
 }

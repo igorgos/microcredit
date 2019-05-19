@@ -9,6 +9,8 @@
 <title>Users</title>
 </head>
 <body>
+<a href="add_user.jsp">Add user</a><br/><br/>
+<form action="deleted_user.jsp" method="post">
 <table border="1"> 
 	<tr>
 		<td>Id user</td>
@@ -26,8 +28,10 @@
 			<td><c:out value="${user.birthDate}"/></td>
 			<td><c:out value="${user.role.name}"/></td>
 			<td><c:out value="${user.hobby.name}"/></td>
+			<td>&nbsp;<input name="user_id${user.id}" type="submit" value="Delete"/>&nbsp;</td>
 		</tr>
 	</c:forEach>  
-</table>  
+</table>
+</form>  
 </body>
 </html>

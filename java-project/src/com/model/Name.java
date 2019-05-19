@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "countries")
-public class Country {
+@Table(name = "names")
+public class Name {
 	private Integer id;
 	private String name;
 	
@@ -19,22 +19,18 @@ public class Country {
 	public Integer getId() {
 		return id;
 	}
-	
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
-	@Column(name="name")
 	public String getName() {
 		return name;
 	}
-	
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	@Override
 	public String toString() {
-		return "Location [id=" + id + ", name=" + name + "]";
+		return "Name [id=" + id + ", name=" + name + "]";
 	}
+	
 }

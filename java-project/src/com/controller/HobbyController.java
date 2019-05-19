@@ -3,6 +3,7 @@ package com.controller;
 import com.repository.HobbyRepository;
 
 import java.util.List;
+
 import com.model.Hobby;
 
 public class HobbyController {
@@ -16,5 +17,8 @@ public class HobbyController {
 		return hobbies;
 	}
 
+	public Hobby save(Hobby hobby) {
+		return hobbyRepository.save(hobby);
+	}
 }
 

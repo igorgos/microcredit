@@ -6,15 +6,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Buna ziua</title>
+<title>Locations</title>
 </head>
 <body>
+
+<a href="add_location.jsp">Add location</a><br/><br/>
+<form action="deleted_location.jsp" method="post">
 <table border="1"> 
 	<tr>
 		<td>Id localitate</td>
 		<td>Localitate</td>
-		<td>Țara</td>
-		<td>Id țara</td>
+		<td>Tara</td>
+		<td>Id tara</td>
 	</tr>
 	<c:forEach var="location" items="${locationController.locations}"> 
 		<tr>
@@ -22,8 +25,10 @@
 			<td><c:out value="${location.name}"/></td>
 			<td><c:out value="${location.country.name}"/></td>
 			<td><c:out value="${location.country.id}"/></td>
+			<td>&nbsp;<input name="location_id${location.id}" type="submit" value="Delete"/>&nbsp;</td>
 		</tr>
 	</c:forEach>  
 </table>  
+</form>
 </body>
 </html>

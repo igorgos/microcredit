@@ -3,6 +3,7 @@ package com.controller;
 import com.repository.LocationRepository;
 
 import java.util.List;
+
 import com.model.Location;
 
 public class LocationController {
@@ -14,6 +15,10 @@ public class LocationController {
 			locations = locationRepository.getAllLocations();
 		}
 		return locations;
+	}
+	
+	public Location save(Location location) {
+		return locationRepository.save(location);
 	}
 
 }

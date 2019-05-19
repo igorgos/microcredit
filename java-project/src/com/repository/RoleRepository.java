@@ -3,6 +3,7 @@ package com.repository;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
 import org.slf4j.Logger;
@@ -13,6 +14,14 @@ import com.model.Role;
 public class RoleRepository {
 	private static final Logger logger = LoggerFactory.getLogger(RoleRepository.class);
 	private EntityManager entityManager = PersistenceManager.createPersistenceManager();
+	
+	public Role save(Role role) {
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		entityManager.persist(role);
+		transaction.commit();
+		return role;
+	}
 	
 	public List<Role> getAllRoles() {
 		Query query = entityManager.createQuery("SELECT role "

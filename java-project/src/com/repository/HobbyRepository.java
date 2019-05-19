@@ -3,6 +3,7 @@ package com.repository;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
 import org.slf4j.Logger;
@@ -13,6 +14,14 @@ import com.model.Hobby;
 public class HobbyRepository {
 	private static final Logger logger = LoggerFactory.getLogger(HobbyRepository.class);
 	private EntityManager entityManager = PersistenceManager.createPersistenceManager();
+	
+	public Hobby save(Hobby hobby) {
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		entityManager.persist(hobby);
+		transaction.commit();
+		return hobby;
+	}
 	
 	public List<Hobby> getAllHobbies() {
 		Query query = entityManager.createQuery("SELECT hobby "

@@ -6,15 +6,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Countries</title>
 </head>
 <body>
 
-Time: <c:out value="${countryController.time}"/><br/> 
+<a href="add_country.jsp">Add country</a><br/><br/>
+<form action="deleted_country.jsp" method="post">
 <table border="1"> 
 	<c:forEach var="country" items="${countryController.countries}"> 
-		<tr><td><c:out value="${country.id}"/></td><td><c:out value="${country.name}"/></td></tr>
+		<tr>
+			<td><c:out value="${country.id}"/></td>
+			<td><c:out value="${country.name}"/></td>
+			<td>&nbsp;<input name="country_id${country.id}" type="submit" value="Delete"/>&nbsp;</td>
+		</tr>
 	</c:forEach>  
-</table>  
+</table>
+</form>  
 </body>
 </html>
