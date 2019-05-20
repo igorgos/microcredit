@@ -20,8 +20,10 @@ public class CountryController {
 		}
 		return countries;
 	}
-	
+
+
 	public Country save(Country country) {
-		return countryRepository.save(country);
+		Country savedCountry = countryRepository.save(country);
+		return savedCountry;
 	}
 }

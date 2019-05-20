@@ -22,6 +22,22 @@ public class CountryRepository {
 		transaction.commit();
 		return country;
 	}
+
+	public Country save(Country country) {
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		entityManager.persist(country);
+		transaction.commit();
+		return country;
+	}
+
+	public Country save(Country country) {
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		entityManager.persist(country);
+		transaction.commit();
+		return country;
+	}
 	
 	public List<Country> getAllCountries() {
 		Query query = entityManager.createQuery("SELECT country "
