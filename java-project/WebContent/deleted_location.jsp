@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Saved location</title>
+<title>Deleted location</title>
 </head>
 <body>
 <%

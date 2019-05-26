@@ -24,7 +24,7 @@
 		<tr>
 			<td><c:out value="${user.id}"/></td>
 			<td><c:out value="${user.name}"/></td>
-			<td><c:out value="${user.adress}"/></td>
+			<td><c:out value="${user.address}"/></td>
 			<td><c:out value="${user.birthDate}"/></td>
 			<td><c:out value="${user.role.name}"/></td>
 			<td><c:out value="${user.hobby.name}"/></td>

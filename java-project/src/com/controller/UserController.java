@@ -15,7 +15,11 @@ public class UserController {
 		}
 		return users;
 	}
-
+	
+	public User getUser(Integer userId) {  
+		User user = userRepository.getUser(userId);
+		return user;
+	}
 	public User save(User user) {
 		return userRepository.save(user);
 	}

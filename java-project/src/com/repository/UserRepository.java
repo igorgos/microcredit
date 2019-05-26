@@ -51,5 +51,13 @@ public class UserRepository {
 		logger.info("Users: {}", users);
 		return users;
 	}
+
+	public User getUser(Integer userId) {
+		Query query = entityManager.createQuery("SELECT user "
+				+ "FROM User user JOIN FETCH user.role WHERE user.id = :userId");
+		query.setParameter("userId", userId);
+		User user = (User) query.getSingleResult();
+		return user;
+	}
 	
 }

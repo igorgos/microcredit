@@ -17,7 +17,7 @@ import javax.persistence.Table;
 public class User {
 	private Integer id;
 	private String name;
-	private String adress;
+	private String address;
 	private Date birthDate;
 	private Integer roleId;
 	private Integer hobbyId;
@@ -26,7 +26,7 @@ public class User {
 	
 	@Id
 	@Column(name="id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Integer getId() {
 		return id;
 	}
@@ -44,13 +44,13 @@ public class User {
 		this.name = name;
 	}
 	
-	@Column(name = "adress")
-	public String getAdress() {
-		return adress;
+	@Column(name = "address")
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
 	@Column(name = "birth_date")
@@ -81,7 +81,6 @@ public class User {
 
 	@ManyToOne
 	@JoinColumn(name="role_id", referencedColumnName="id", insertable=false, updatable=false, foreignKey=@ForeignKey(name="FK_users_roles"))
-	
     public Role getRole() {
 		return role;
 	}
@@ -92,7 +91,6 @@ public class User {
 	
 	@ManyToOne
 	@JoinColumn(name="hobby_id", referencedColumnName="id", insertable=false, updatable=false, foreignKey=@ForeignKey(name="FK_users_hobbies"))
-	
 	public Hobby getHobby() {
 		return hobby;
 	}
@@ -103,7 +101,7 @@ public class User {
 	
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", adress=" + adress + ", birthDate=" + birthDate + ", roleId="
+		return "User [id=" + id + ", name=" + name + ", address=" + address + ", birthDate=" + birthDate + ", roleId="
 				+ roleId + ", hobby_id=" + hobbyId + ", role=" + role + ", hobby=" + hobby + "]";
 	}
 }
