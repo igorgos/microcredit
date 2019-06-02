@@ -1,4 +1,4 @@
-package com.repository;
+package com.model;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -11,6 +11,7 @@ import javax.persistence.Query;
 import org.junit.Test;
 
 import com.model.User;
+import com.repository.PersistenceManager;
 
 public class UserTest {
 	@Test
