@@ -26,4 +26,16 @@ public class CountryTest {
 		assertTrue(countries.size() > 0);
 	}
 
+	@Test
+	public void testFindCountriesById() {
+		EntityManager entityManager = PersistenceManager.createPersistenceManager();
+		Query query = entityManager.createQuery("SELECT country "
+				+ "FROM Country country "
+				+ "WHERE id IN(1,2,3)" );
+		@SuppressWarnings("unchecked")
+		List<Country> countries = query.getResultList();
+		assertNotNull(countries);
+		assertTrue(countries .size() > 0);
+	}
+	
 }

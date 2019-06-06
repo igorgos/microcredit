@@ -7,14 +7,4 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-	<servlet>
-		<servlet-name>thymeleafexample</servlet-name>
-		<servlet-class>com.thymeleaf.ThymeleafHelloWorldExample</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>thymeleafexample</servlet-name>
-		<url-pattern>/thymeleafexample</url-pattern>
-	</servlet-mapping>
-
 </web-app>
