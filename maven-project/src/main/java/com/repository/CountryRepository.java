@@ -42,5 +42,14 @@ public class CountryRepository {
 		logger.info("Contries: {}", countries);
 		return countries;
 	}
+	
+	public List<Country> getCountriesById() {
+		Query query = entityManager.createQuery("SELECT country "
+				+ "FROM Country country WHERE id IN(1,2,3)");
+		@SuppressWarnings("unchecked")
+		List<Country> countries = query.getResultList();
+		logger.info("Contries: {}", countries);
+		return countries;
+	}
 
 }

@@ -25,7 +25,7 @@ public class UserRepository {
 	
 	public List<User> getAllUsers() {
 		Query query = entityManager.createQuery("SELECT user "
-				+ "FROM User user");
+				+ "FROM User user ORDER BY id");
 		@SuppressWarnings("unchecked")
 		List<User> users = query.getResultList();
 		logger.info("All users: {}", users);
