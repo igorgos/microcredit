@@ -3,13 +3,14 @@
 <%@ page import="com.controller.CountryController"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <jsp:useBean id="countryController1" class="com.controller.CountryController"/>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Countries</title>
 </head>
 <body>
-<a href = "index.jsp">Back</a><br/><br/>
+<a href = "add_country.jsp">Add country</a><br/><br/>
 <table border="1">
 	<tr>
 		<td>Id</td>
@@ -21,7 +22,7 @@
 		<td><c:out value="${country.name}"/></td>
 	</tr>
 </c:forEach>
-</table>
-
+</table><br/>
+<a href = "index.jsp">Back</a><br/><br/>
 </body>
 </html>
