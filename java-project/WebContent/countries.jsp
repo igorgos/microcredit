@@ -10,7 +10,8 @@
 </head>
 <body>
 
-<a href="add_country.jsp">Add country</a><br/><br/>
+<a href="add_country.jsp">Add country</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "index.jsp">Index</a><br/><br/>
 <form action="deleted_country.jsp" method="post">
 <table border="1"> 
 	<c:forEach var="country" items="${countryController.countries}"> 
@@ -20,7 +21,8 @@
 			<td>&nbsp;<input name="country_id${country.id}" type="submit" value="Delete"/>&nbsp;</td>
 		</tr>
 	</c:forEach>  
-</table>
+</table><br/><br/>
+<a href = "index.jsp">Back</a>
 </form>  
 </body>
 </html>

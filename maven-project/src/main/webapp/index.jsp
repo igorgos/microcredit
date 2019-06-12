@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html>
 <head>
@@ -12,5 +13,6 @@
 	3.  <a href = "users.jsp">Users</a><br/><br/>
 	4.  <a href = "hobbies.jsp">Hobbies</a><br/><br>
 	5.  <a href = "roles.jsp">Roles</a><br/><br/>
+	
 </body>
 </html>

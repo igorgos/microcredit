@@ -10,7 +10,8 @@
 </head>
 <body>
 
-<a href="add_location.jsp">Add location</a><br/><br/>
+<a href="add_location.jsp">Add location</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "index.jsp">Index</a><br/><br/>
 <form action="deleted_location.jsp" method="post">
 <table border="1"> 
 	<tr>

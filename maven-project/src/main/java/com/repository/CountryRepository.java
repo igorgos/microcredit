@@ -3,6 +3,7 @@ package com.repository;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
 import org.slf4j.Logger;
@@ -14,6 +15,14 @@ public class CountryRepository {
 	private static final Logger logger = LoggerFactory.getLogger(CountryRepository.class);
 	private EntityManager entityManager = PersistenceManager.createPersistenceManager();
 
+	public Country save(Country country) {
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		entityManager.persist(country);
+		transaction.commit();
+		return country;
+	}
+		
 	public List<Country> getAllCountries() {
 		Query query = entityManager.createQuery("SELECT country "
 				+ "FROM Country country");

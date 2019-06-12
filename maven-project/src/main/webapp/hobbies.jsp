@@ -9,7 +9,7 @@
 <title>Hobbies</title>
 </head>
 <body>
-<a href = "index.jsp">Back</a><br/><br/>
+<a href = "add_hobby.jsp">Add hobby</a><br/><br/>
 <table border = "1">
 	<tr>
 		<td>Numele Utilizatorului</td>
@@ -18,16 +18,16 @@
 	</tr>
 <c:forEach var = "hobby" items = "${hobbyController.hobbies}">
 	<tr>
-<%-- 		<td><c:forEach var="user" items="${hobby.users}"> --%>
-<%-- 				<c:out value="${user.name}"/> --%>
-<%-- 			</c:forEach></td> --%>
-		<td><c:out value = "${hobby.users.name}"/></td>
+		<td><c:forEach var="user" items="${hobby.users}"> 
+			<c:out value="${user.name}"/>
+			</c:forEach></td> 
 		<td><c:out value = "${hobby.id}"/></td>
 		<td><c:out value = "${hobby.name}"/></td>
 		
 	</tr>
 </c:forEach>
-</table>
+</table><br/>
+<a href = "index.jsp">Back</a><br/><br/>
 
 </body>
 </html>

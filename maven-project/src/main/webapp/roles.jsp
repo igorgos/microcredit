@@ -9,7 +9,7 @@
 <title>Roles</title>
 </head>
 <body>
-<a href = "index.jsp">Back</a><br/><br/>
+<a href = "add_role.jsp">Add role</a><br/><br/>
 <table border = "1">
 	<tr>
 		<td>Numele Utilizatorului</td>
@@ -18,14 +18,15 @@
 	</tr>
 <c:forEach var = "role" items = "${roleController.roles}">
 	<tr>
-<%-- 		<td><c:forEach var="user" items="${role.users}"> --%>
-<%--  				<c:out value="${user.name}"/> --%>
-<%-- 			</c:forEach></td>  --%>
-		<td><c:out value = "${role.users.name}"/></td>
+		<td><c:forEach var="user" items="${role.users}">
+ 				<c:out value="${user.name}"/>
+ 				</c:forEach></td>
+		<%-- <td><c:out value = "${role.users.name}"/></td> --%>
 		<td><c:out value = "${role.id}"/></td>
 		<td><c:out value = "${role.name}"/></td>
 	</tr>
 </c:forEach>
-</table>
+</table><br/>
+<a href = "index.jsp">Back</a>
 </body>
 </html>

@@ -9,7 +9,8 @@
 <title>Users</title>
 </head>
 <body>
-<a href="add_user.jsp">Add user</a><br/><br/>
+<a href="add_user.jsp">Add user</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "index.jsp">Index</a><br/><br/>
 <form action="deleted_user.jsp" method="post">
 <table border="1"> 
 	<tr>

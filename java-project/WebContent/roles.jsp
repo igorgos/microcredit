@@ -10,7 +10,8 @@
 </head>
 <body>
 
-<a href="add_role.jsp">Add role</a><br/><br/>
+<a href="add_role.jsp">Add role</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "index.jsp">Index</a><br/><br/>
 <form action="deleted_role.jsp" method="post">
 <table border="1"> 
 	<tr>

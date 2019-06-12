@@ -10,7 +10,8 @@
 </head>
 <body>
 
-<a href="add_hobby.jsp">Add hobby</a><br/><br/>
+<a href="add_hobby.jsp">Add hobby</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "index.jsp">Index</a><br/><br/>
 <form action="deleted_hobby.jsp" method="post">
 <table border="1"> 
 	<tr>

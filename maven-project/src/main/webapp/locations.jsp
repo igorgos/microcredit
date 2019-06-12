@@ -9,7 +9,7 @@
 <title>Locations</title>
 </head>
 <body>
-<a href = "index.jsp">Back</a><br/><br/>
+<a href = "add_location.jsp">Add Location</a><br/><br/>
 <table border = "1">
 	<tr>
 		<td>Id Localitate</td>
@@ -25,6 +25,7 @@
 		<td><c:out value = "${location.country.name}"/></td>
 	</tr>
 </c:forEach>
-</table>
+</table><br/>
+<a href = "index.jsp">Back</a><br/><br/>
 </body>
 </html>

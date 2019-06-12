@@ -9,7 +9,7 @@
 <title>Users</title>
 </head>
 <body>
-<a href = "index.jsp">Back</a><br/><br/>
+<a href = "add_user.jsp">Add user</a><br/><br/>
 <table border = "1">
 	<tr>
 		<td>Id</td>
@@ -33,7 +33,7 @@
 		<td><c:out value = "${user.hobby.name}"/></td>
 	</tr>
 </c:forEach>
-</table>
-
+</table><br/>
+<a href = "index.jsp">Back</a><br/><br/>
 </body>
 </html>
