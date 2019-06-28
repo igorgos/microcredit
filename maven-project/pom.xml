@@ -8,6 +8,13 @@
 	<packaging>war</packaging>
 	<name>Microcredit</name>
 	<description>Intreprindere de microfinantare</description>
+	<properties>
+		<java.version>1.8</java.version>
+		<primefaces.version>7.0</primefaces.version>
+		<jsf.version>2.2.7</jsf.version>
+		<rewrite.version>3.4.1.Final</rewrite.version>
+	</properties>
+	
 	<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
 	<dependencies>
 		<dependency>
@@ -41,12 +48,24 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- jsf -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>${jsf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>${jsf.version}</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
 		<dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.1-901-1.jdbc4</version>
 		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>
