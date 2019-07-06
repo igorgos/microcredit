@@ -16,6 +16,7 @@
 		<td>Localitate</td>
 		<td>Id Tara</td>
 		<td>Tara</td>
+		<td>Delete button</td>
 	</tr>
 <c:forEach var = "location" items = "${locationController.locations}">
 	<tr>
@@ -23,6 +24,7 @@
 		<td><c:out value = "${location.name}"/></td>
 		<td><c:out value = "${location.country.id}"/></td>
 		<td><c:out value = "${location.country.name}"/></td>
+		<td><a href="addLocation?location_id=${location.id}">Delete</a></td>
 	</tr>
 </c:forEach>
 </table><br/>

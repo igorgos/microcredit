@@ -15,6 +15,7 @@
 		<td>Numele Utilizatorului</td>
 		<td>Id Profesie</td>
 		<td>Profesie</td>
+		<td>Delete button</td>
 	</tr>
 <c:forEach var = "role" items = "${roleController.roles}">
 	<tr>
@@ -24,6 +25,7 @@
 		<%-- <td><c:out value = "${role.users.name}"/></td> --%>
 		<td><c:out value = "${role.id}"/></td>
 		<td><c:out value = "${role.name}"/></td>
+		<td><a href="addRole?role_id=${role.id}">Delete</a></td>
 	</tr>
 </c:forEach>
 </table><br/>

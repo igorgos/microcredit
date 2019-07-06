@@ -15,14 +15,23 @@
 	<tr>
 		<td>Id</td>
 		<td>Name</td>
+		<td>Phone</td>
+		<td>Delete</td>
 	</tr>
+	
 <c:forEach var="country" items="${countryController1.countries}">
+
 	<tr>
 		<td><c:out value="${country.id}"/></td>
-		<td><c:out value="${country.name}"/></td>
+		<td><a href="edit_country.jsp?country_id=${country.id}"><c:out value="${country.name}"/></a></td>
+		<td><c:out value="${country.phone}"/></td>
+		<td><a href="addCountry?country_id=${country.id}">Delete</a></td>
 	</tr>
 </c:forEach>
 </table><br/>
 <a href = "index.jsp">Back</a><br/><br/>
+<audio controls="controls">
+		<source src="copilaria.mp3" type="audio/mp3"/>
+</audio>
 </body>
 </html>

@@ -7,7 +7,7 @@
 </head>
 <body>
 <a href = "hobbies.jsp">Back</a><br/><br/>
-<form action="saved_hobby.jsp" method="post">
+<form action="addHobby" method="post">
 <label for="hobby_name">Hobby name:</label>
 <input name="hobby_name" type="text"/><br/>
 <input value="Save" type="submit"/>

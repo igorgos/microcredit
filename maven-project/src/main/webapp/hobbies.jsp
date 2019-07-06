@@ -15,6 +15,7 @@
 		<td>Numele Utilizatorului</td>
 		<td>Id Hobby</td>
 		<td>Denumirea Hobby</td>
+		<td>Delete button</td>
 	</tr>
 <c:forEach var = "hobby" items = "${hobbyController.hobbies}">
 	<tr>
@@ -23,7 +24,7 @@
 			</c:forEach></td> 
 		<td><c:out value = "${hobby.id}"/></td>
 		<td><c:out value = "${hobby.name}"/></td>
-		
+		<td><a href="addHobby?hobby_id=${hobby.id}">Delete</a></td>
 	</tr>
 </c:forEach>
 </table><br/>

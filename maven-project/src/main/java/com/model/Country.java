@@ -12,6 +12,7 @@ import javax.persistence.Table;
 public class Country {
 	private Integer id;
 	private String name;
+	private String phone;
 	
 	@Id
 	@Column(name="id")
@@ -33,8 +34,18 @@ public class Country {
 		this.name = name;
 	}
 
-	@Override
-	public String toString() {
-		return "Location [id=" + id + ", name=" + name + "]";
+	@Column(name="phone")
+	public String getPhone() {
+		return phone;
 	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+//	@Override
+//	public String toString() {
+//		return "Country [id=" + id + ", name=" + name + ", phone=" + phone + "]";
+//	}
+
 }

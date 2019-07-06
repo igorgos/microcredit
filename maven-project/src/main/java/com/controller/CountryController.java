@@ -8,10 +8,19 @@ import com.repository.CountryRepository;
 
 public class CountryController {
 	private CountryRepository countryRepository = new CountryRepository();
-	List<Country> countries;
+	private List<Country> countries;
+	private Country selectedCountry;
 
 	public Date getTime() {
 		return new Date();
+	}
+
+	public Country getSelectedCountry() {
+		return selectedCountry;
+	}
+
+	public void setSelectedCountry(Country selectedCountry) {
+		this.selectedCountry = selectedCountry;
 	}
 
 	public List<Country> getCountries() {
@@ -22,6 +31,20 @@ public class CountryController {
 	}
 
 	public Country save(Country country) {
+		System.out.println(country.getName());
+		System.out.println(country.getPhone());
 		return countryRepository.save(country);
+	}
+
+	public void delete(Integer countryId) {
+		countryRepository.delete(countryId);
+	}
+	
+	public Country getById(Integer countryId) {
+		return countryRepository.getById(countryId);
+	}
+	
+	public void setSelectedCountry(Integer countryId) {
+		selectedCountry = countryRepository.getById(countryId);
 	}
 }

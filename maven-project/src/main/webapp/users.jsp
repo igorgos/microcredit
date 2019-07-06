@@ -20,6 +20,7 @@
 		<td>Profesie</td>
 		<td>Id Hobby</td>
 		<td>Hobby</td>
+		<td>Delete button</td>
 	</tr>
 <c:forEach var = "user" items = "${userController.users}">
 	<tr>
@@ -31,6 +32,7 @@
 		<td><c:out value = "${user.role.name}"/></td>
 		<td><c:out value = "${user.hobbyId}"/></td>
 		<td><c:out value = "${user.hobby.name}"/></td>
+		<td><a href="addUser?user_id=${user.id}">Delete</a></td>
 	</tr>
 </c:forEach>
 </table><br/>

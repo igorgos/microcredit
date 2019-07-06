@@ -20,5 +20,13 @@ public class RoleController {
 	public Role save(Role role) {
 		return roleRepository.save(role);
 	}
+	
+	public Role getById(Integer roleId) {
+		return roleRepository.getById(roleId);
+	}
+	
+	public void delete(Integer roleId) {
+		roleRepository.delete(roleId);
+	}
 }
 

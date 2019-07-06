@@ -52,4 +52,22 @@ public class RoleRepository {
 		return roles;
 	}
 	
+	public Role getById(Integer roleId) {
+		Query query = entityManager.createQuery("SELECT role "
+				+ "FROM Role role WHERE role.id = :roleId ");
+		query.setParameter("roleId", roleId);
+		@SuppressWarnings("unchecked")
+		Role role = (Role) query.getSingleResult();
+		logger.info("Role: {}", role);
+		return role;
+	}
+	
+	public void delete(Integer roleId) {
+		Query query = entityManager.createQuery("DELETE FROM Role WHERE id = :roleId");
+		query.setParameter("roleId", roleId);
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		query.executeUpdate();
+		transaction.commit();
+	}	
 }

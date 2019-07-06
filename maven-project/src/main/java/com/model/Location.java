@@ -18,9 +18,18 @@ public class Location {
 	private Country country;
 	private String name;
 	
+	public Location() {	
+	}
+	
+	public Location(Integer countryId, String name) {
+		this.countryId = countryId;
+		this.name = name;
+	}
+
+	
 	@Id
 	@Column(name="id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Integer getId() {
 		return id;
 	}

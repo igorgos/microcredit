@@ -7,8 +7,8 @@
 </head>
 <body>
 <a href = "roles.jsp">Back</a><br/><br/>
-	<form action = "saved_role.jsp" method = "post">
-	<label for="user_role">User name:</label>
+	<form action = "addRole" method = "post">
+	<label for="user_role">Role name:</label>
 	<input name = "user_role" type = "text"><br/>
 	<input value="Save" type="submit"/>
 	</form>

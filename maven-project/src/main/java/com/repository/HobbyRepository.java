@@ -52,4 +52,23 @@ public class HobbyRepository {
 		return hobbies;
 	}
 	
+	public Hobby getById(Integer hobbyId) {
+		Query query = entityManager.createQuery("SELECT hobby "
+				+ "FROM Hobby hobby WHERE hobby.id = :hobbyId ");
+		query.setParameter("hobbyId", hobbyId);
+		@SuppressWarnings("unchecked")
+		Hobby hobby = (Hobby) query.getSingleResult();
+		logger.info("Hobby: {}", hobby);
+		return hobby;
+	}
+	
+	public void delete(Integer hobbyId) {
+		Query query = entityManager.createQuery("DELETE FROM Hobby WHERE id = :hobbyId");
+		query.setParameter("hobbyId", hobbyId);
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		query.executeUpdate();
+		transaction.commit();
+	}
+	
 }

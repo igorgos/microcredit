@@ -16,9 +16,14 @@ public class CountryRepository {
 	private EntityManager entityManager = PersistenceManager.createPersistenceManager();
 
 	public Country save(Country country) {
+		logger.info("Country: {}, {}", country.getName(), country.getPhone());
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
-		entityManager.persist(country);
+		if(country.getId() == null) {
+			entityManager.persist(country);
+		} else { 
+			entityManager.merge(country);
+		}
 		transaction.commit();
 		return country;
 	}
@@ -52,13 +57,30 @@ public class CountryRepository {
 		return countries;
 	}
 	
-	public List<Country> getCountriesById() {
+	public List<Country> getCountriesByIds() {
 		Query query = entityManager.createQuery("SELECT country "
 				+ "FROM Country country WHERE id IN(1,2,3)");
 		@SuppressWarnings("unchecked")
 		List<Country> countries = query.getResultList();
 		logger.info("Contries: {}", countries);
 		return countries;
+	}
+
+	public void delete(Integer countryId) {
+		Query query = entityManager.createQuery("DELETE FROM Country WHERE id = :countryId");
+		query.setParameter("countryId", countryId);
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		query.executeUpdate();
+		transaction.commit();
+	}
+	
+	public Country getById(Integer countryId) {
+		Query query = entityManager.createQuery("FROM Country WHERE id = :countryId");
+		//Query query = entityManager.createQuery("SELECT country FROM Country country WHERE country.id = :countryId");
+		query.setParameter("countryId", countryId);
+		Country country = (Country) query.getSingleResult();
+		return country;
 	}
 
 }

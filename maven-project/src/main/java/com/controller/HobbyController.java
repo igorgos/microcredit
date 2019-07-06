@@ -20,5 +20,13 @@ public class HobbyController {
 	public Hobby save(Hobby hobby) {
 		return hobbyRepository.save(hobby);
 	}
+	
+	public Hobby getById(Integer hobbyId) {
+		return hobbyRepository.getById(hobbyId);
+	}
+	
+	public void delete(Integer hobbyId) {
+		hobbyRepository.delete(hobbyId);
+	}
 }
 

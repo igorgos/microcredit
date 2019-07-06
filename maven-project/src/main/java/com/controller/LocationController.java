@@ -20,6 +20,7 @@ public class LocationController {
 	public Location save(Location location) {
 		return locationRepository.save(location);
 	}
+	
 
 }
 
