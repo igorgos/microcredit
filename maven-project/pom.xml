@@ -25,13 +25,8 @@
 		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
 		<dependency>
 		    <groupId>javax.servlet</groupId>
-<<<<<<< HEAD
 		    <artifactId>javax.servlet-api</artifactId>
 		    <version>3.1.0</version>
-=======
-		    <artifactId>servlet-api</artifactId>
-		    <version>2.5</version>
->>>>>>> origin/master
 		    <scope>provided</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->

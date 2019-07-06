@@ -31,7 +31,6 @@ public class CountryController {
 	}
 
 	public Country save(Country country) {
-<<<<<<< HEAD
 		System.out.println(country.getName());
 		System.out.println(country.getPhone());
 		return countryRepository.save(country);
@@ -48,8 +47,4 @@ public class CountryController {
 	public void setSelectedCountry(Integer countryId) {
 		selectedCountry = countryRepository.getById(countryId);
 	}
-=======
-		return countryRepository.save(country);
-	}
->>>>>>> origin/master
 }

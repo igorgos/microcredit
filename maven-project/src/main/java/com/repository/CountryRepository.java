@@ -16,7 +16,6 @@ public class CountryRepository {
 	private EntityManager entityManager = PersistenceManager.createPersistenceManager();
 
 	public Country save(Country country) {
-<<<<<<< HEAD
 		logger.info("Country: {}, {}", country.getName(), country.getPhone());
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
@@ -25,11 +24,6 @@ public class CountryRepository {
 		} else { 
 			entityManager.merge(country);
 		}
-=======
-		EntityTransaction transaction = entityManager.getTransaction();
-		transaction.begin();
-		entityManager.persist(country);
->>>>>>> origin/master
 		transaction.commit();
 		return country;
 	}
