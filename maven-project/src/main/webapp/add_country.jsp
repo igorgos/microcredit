@@ -6,6 +6,7 @@
 <title>Add country</title>
 </head>
 <body>
+<<<<<<< HEAD
 <a href = "countries.jsp">Back</a><br/><br/>
 
 <form action="addCountry" method="post"> 
@@ -14,6 +15,13 @@
 	<label for="phone">Phone:</label>
 	<input name="phone" type="text"/><br/>
 	<input value="Save" type="submit"/>
+=======
+<form action="saved_country.jsp" method="post">
+<label for="country_name">Country name:</label>
+<input name="country_name" type="text"/><br/>
+<input value="Save" type="submit"/>
+
+>>>>>>> origin/master
 </form>
 
 </body>
