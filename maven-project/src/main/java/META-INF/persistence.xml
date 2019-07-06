@@ -10,9 +10,9 @@
 		<class>com.model.Hobby</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/microcredit" />
+<!-- 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/microcredit" /> -->
 <!-- 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://shuttle.starnet.md:5432/af_test" /> -->
-<!-- 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.1.102:5432/af_test" /> -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.1.102:5432/af_test" />
 			<property name="javax.persistence.jdbc.user" value="microcredit_dev" />
 			<property name="javax.persistence.jdbc.password" value="dev_microcredit" />
 	
