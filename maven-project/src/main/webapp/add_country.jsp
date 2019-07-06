@@ -14,6 +14,6 @@
 	<label for="phone">Phone:</label>
 	<input name="phone" type="text"/>	
 	<input value="Save" type="submit"/>
-	</form>
+</form>
 </body>
 </html>
